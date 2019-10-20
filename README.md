@@ -28,7 +28,7 @@ This script implements the [reCAPTCHA v2](https://developers.google.com/recaptch
 ```
 // reCAPTCHA object
 var recaptcha = {
-    type: 'external-html',
+    type: "external-html",
     url: "recaptcha.html",
     cont_btn: "submit_button",
     execute_script: true
