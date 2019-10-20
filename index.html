@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>reCAPTCHA in jsPsych</title>
+  <script src="jspsych-6.0.5/jspsych.js"></script>
+  <script src="jspsych-6.0.5/plugins/jspsych-html-keyboard-response.js"></script>
+  <script src="jspsych-6.0.5/plugins/jspsych-external-html.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link href="jspsych-6.0.5/css/jspsych.css" rel="stylesheet" type="text/css">
+  </link>
+</head>
+
+<body></body>
+<script>
+  // reCAPTCHA
+  var recaptcha = {
+    type: 'external-html',
+    url: "recaptcha.html",
+    cont_btn: "submit_button",
+    execute_script: true
+  };
+
+  var welcome = {
+    type: "html-keyboard-response",
+    stimulus: "Welcome to the experiment. Press any key to begin."
+  };
+
+  var timeline = [];
+
+  timeline.push(recaptcha);
+  timeline.push(welcome);
+
+  jsPsych.init({
+    timeline: timeline
+  });
+</script>
+
+</html>

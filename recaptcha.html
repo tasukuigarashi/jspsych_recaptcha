@@ -1,0 +1,13 @@
+<script>
+    var submit = document.getElementById("submit_button");
+    submit.style.display = "none";
+    var correctCaptcha = function () {
+        submit.style.display = "block";
+    };
+</script>
+<form action="?" method="POST">
+    <div class="g-recaptcha" data-sitekey="6Lcjbr4UAAAAAPc-Dd5AD3Bze_6G8g70WaYBt7Id" data-callback="correctCaptcha">
+    </div>
+    <br />
+    <input type="submit" value="Proceed" id="submit_button">
+</form>
